@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "criticalib",
+  "version": "${version}",
+  "name": "CriticaLib",
+  "description": "A Library Mod (for DamageIndicator and Critical)",
+  "authors": [
+    "hamusuke2303"
+  ],
+  "license": "CC0-1.0",
+  "environment": "*",
+  "mixins": [
+    "criticalib.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
