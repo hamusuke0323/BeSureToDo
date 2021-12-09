@@ -3,7 +3,7 @@
   "id": "criticalib",
   "version": "${version}",
   "name": "CriticaLib",
-  "description": "A Library Mod (for DamageIndicator and Critical)",
+  "description": "A Library Mod (for Damage Indicator and Critical)",
   "authors": [
     "hamusuke2303"
   ],

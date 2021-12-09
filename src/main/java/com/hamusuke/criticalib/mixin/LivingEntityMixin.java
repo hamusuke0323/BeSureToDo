@@ -37,6 +37,13 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityIn
         }
     }
 
+    @Inject(method = "damage", at = @At("RETURN"))
+    private void damage$Return(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+        if (source.getAttacker() instanceof LivingEntityInvoker livingEntityInvoker) {
+            livingEntityInvoker.setCritical(false);
+        }
+    }
+
     @Override
     public void setCritical(boolean flag) {
         this.dataTracker.set(CRITICAL, flag);
