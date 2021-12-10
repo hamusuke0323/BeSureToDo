@@ -15,7 +15,13 @@ public abstract class PlayerEntityMixin extends LivingEntityMixin {
 
     @ModifyVariable(method = "attack", at = @At("STORE"), ordinal = 2)
     private boolean attack$bl3(boolean bl3) {
-        this.setCritical(bl3);
+        boolean bl = this.isCritical();
+        if (bl) {
+            bl3 = true;
+        } else if (bl3) {
+            this.setCritical(true);
+        }
+
         return bl3;
     }
 }
